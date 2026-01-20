@@ -8,6 +8,7 @@ import About from './interface/About/About'
 import Projects from './interface/Projects/Projects'
 import Services from './interface/Services/Servises'
 import Footer from './interface/Footer/footer'
+import AllProjects from "./interface/Projects/AllProjects/AllProjects"
 {/* inteface project components import*/}
 
 {/* App project components import*/}
@@ -70,21 +71,21 @@ function AppContent() {
       <CssBaseline />
       <LanguechButtonContextProvider>
         <AllertContextProvider>
+        <Header navOpenNavMedia={navOpenNavMedia}
+               setNavOpenNavMedia={setNavOpenNavMedia}/>
         <Routes>
           <Route path="/" element={
             <>
-              <Header navOpenNavMedia={navOpenNavMedia}
-               setNavOpenNavMedia={setNavOpenNavMedia}/>
               <Home />
               <About />
               <Projects />
               <Services />
-              <Footer />
             </>
           } />
-          
+         <Route path="/projects/AllProjects" element={<AllProjects />} />
          <Route path="*" element={<Page404 />} />
         </Routes>
+        <Footer />
         </AllertContextProvider>
       </LanguechButtonContextProvider>
     </ThemeProvider>

@@ -34,6 +34,7 @@ import { AllertContext } from '../../context/contextAllert';
 {/* allerts import*/}
 import  InfoAllert from '../../Allerts/InfoAllert';
 import  WarningAllert from '../../Allerts/WarningAllert';
+import { Link } from 'react-router-dom';
 {/* allerts import*/}
 
 export default function Projects() {
@@ -62,8 +63,7 @@ export default function Projects() {
     className={style.ProjectsMe}>
       <h4 style={{fontFamily: theme.fonts.Pacifico}}>{t('Projects')}</h4>
     {/* Projects Data Handle */}
-    <div 
-    
+    <div  
     className={style.projects}>
        {TotalProjects.slice(0, 3).map((project) => (
          <div
@@ -111,6 +111,9 @@ export default function Projects() {
     {/* Projects Data Handle */}
     </div>
     {/* allerts */}
+    <Link to="projects/AllProjects">
+     <button className={style.AllProjects}>All Projects</button>
+    </Link>
     <Fade in={allertType === "projectsAllet" ? openAllert: allertType === "codeProjectsAllet" ? openAllert : false}>
       <InfoAllert />
     </Fade>

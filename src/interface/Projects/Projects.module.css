@@ -1,4 +1,8 @@
 .ProjectsMe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 30px 50px;
 }
 
@@ -67,6 +71,24 @@
     background-image: radial-gradient( circle farthest-corner at 10% 10%,  rgba(163,0,81,1) 0%, rgba(132,10,190,1) 30.2% ); 
     padding: 13px 23px;
     border:2.7px solid;
+}
+
+.ProjectsMe .AllProjects{
+    padding: 8px 12px;
+    margin-top: 40px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    color: #a30051;
+    border:3px solid #a30051;
+    box-shadow: 0 0 10px white;
+    cursor: pointer;
+}
+
+.ProjectsMe .AllProjects:hover{
+    color: #fff;
+    background-color: transparent;
+    border-color: white;
+    box-shadow: 0 0 17px #a30051;   
 }
 
 @media(max-width: 1070px){

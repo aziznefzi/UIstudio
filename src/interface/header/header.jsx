@@ -25,6 +25,7 @@ import NightlightRoundIcon from '@mui/icons-material/NightlightRound';
 
 {/* i18n import */}
 import { useTranslation } from 'react-i18next';
+import { useNavigate, useLocation } from 'react-router-dom';
 {/* i18n import */}
 
 {/* context import */}
@@ -87,6 +88,24 @@ export default function header({navOpenNavMedia, setNavOpenNavMedia}) {
   const toggleTheme = () => {
     setWebsiteTheme(WebsiteTheme === 'dark' ? 'light' : 'dark')
   }
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleNavClick = (e, link) => {
+    if (link === '#Contests') {
+      e.preventDefault();
+      setOpenAlert(true);
+      return;
+    }
+
+    if (location.pathname !== '/') {
+      e.preventDefault();
+      navigate('/' + link);
+      setNavOpenNavMedia(false);
+    }
+    // If we are on '/', standard href="#link" works with scroll-behavior: smooth
+  };
+
   const NavValue = [
     { id: 1, icon: <HomeIcon/>, name: 'Home', link: '#Home' },
     { id: 2, icon: <PersonIcon/>, name: 'About', link: '#About' },
@@ -127,12 +146,7 @@ export default function header({navOpenNavMedia, setNavOpenNavMedia}) {
       <ul className={style.nav}>
         {NavValue.map((item) => (
           <li key={item.id}>
-            <a href={item.link} onClick={(e) => {
-               if (item.link === '#Contests') {
-                 e.preventDefault();
-                 setOpenAlert(true);
-               }
-            }}>{t(item.name)}</a>
+            <a href={item.link} onClick={(e) => handleNavClick(e, item.link)}>{t(item.name)}</a>
           </li>
         ))}
       </ul>
@@ -190,19 +204,14 @@ export default function header({navOpenNavMedia, setNavOpenNavMedia}) {
     <ul className={style.nav}>
         {NavValue.map((item) => (
           <li key={item.id} onClick={(e) => {
-            setNavOpenNavMedia(false);
-            e.preventDefault();
-            if (item.link === '#Contests') {
-              setOpenAlert(true);
-              return;
-            }
-            setTimeout(() => {
-
+            handleNavClick(e, item.link);
+            if (location.pathname === '/') {
+              setNavOpenNavMedia(false);
               const element = document.querySelector(item.link);
               if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
               }
-            }, 300);
+            }
           }}>
             <a href={item.link} onClick={(e) => e.preventDefault()}>{t(item.name)}</a>
             {React.cloneElement(item.icon, { style: { fill: "url(#iconGradient)" } })}
