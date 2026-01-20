@@ -1,0 +1,29 @@
+*{
+  padding: 0;
+  margin: 0;
+  transition: all .5s ease-in-out;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h4{
+    font-size: 3.3rem;
+}
+
+@font-face {
+  font-family: 'Englesh';
+  src: url('./frontend/Fonts/Poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Arabe';
+  src: url('./frontend/Fonts/Readex_Pro/ReadexPro-VariableFont_HEXP,wght.ttf');
+}
+
+@font-face {
+  font-family: 'Pacifico';
+  src: url('./frontend/Fonts/Pacifico/Pacifico-Regular.ttf');
+}

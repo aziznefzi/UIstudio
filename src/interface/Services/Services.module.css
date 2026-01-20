@@ -1,0 +1,156 @@
+.Services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 40px;
+}
+
+.Services h4{
+    background-image: radial-gradient( circle farthest-corner at 10% 10%,  #840abe 0%, #a30051 30.2% ); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+
+}
+
+.Services p{
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.Services p span{
+    background-image: radial-gradient( circle farthest-corner at 10% 10%,  #840abe 0%, #a30051 30.2% ); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Services .ServisesContent{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 1000px; /* Forces wrap after 3rd item (3*280 + 2*25 = 890px) */
+    width: 100%;
+}
+
+.Services .ServisesContent .ServisesItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid;
+    padding: 25px;
+    border-radius: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 280px; /* Fixed width for consistency */
+}
+
+.Services .ServisesContent .ServisesItem:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.Services .ServisesContent .ServisesItem img{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    border: #fff 3px solid;
+}
+
+.Services .ServisesContent .ServisesItem h5{
+    margin: 10px 0;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Base Paragraph Style */
+.Services .ServisesContent .ServisesItem p {
+    color: #fff;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    flex-grow: 1; 
+}
+
+/* Truncated State: Limits lines and adds ellipsis */
+.Services .ServisesContent .ServisesItem .truncatedText {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Show only 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 4.5em; /* 3 lines * 1.5 line-height = 4.5em */
+}
+
+/* Expanded State: Shows full text */
+.Services .ServisesContent .ServisesItem .expandedText {
+    display: block;
+    height: auto;
+    -webkit-line-clamp: unset;
+    overflow: visible;
+}
+
+.Services .ServisesContent .ServisesItem button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #fff;
+    color: #a30051;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.822);
+    border: 3px solid #840abe;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 658px) {
+    .Services {
+        padding: 20px 10px;
+    }
+    
+    .Services p{
+    font-size: 15px;
+    }
+
+    .Services .ServisesContent {
+        gap: 15px;
+    }
+
+    .Services .ServisesContent .ServisesItem {
+        padding: 15px;
+        width: 100%; /* Full width on small screens */
+        max-width: 300px; /* But don't get too wide */
+    }
+
+    .Services .ServisesContent .ServisesItem img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .Services .ServisesContent .ServisesItem h5 {
+        font-size: 18px;
+        margin: 8px 0;
+    }
+
+    .Services .ServisesContent .ServisesItem p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .Services .ServisesContent .ServisesItem button {
+        gap: 5px;
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,154 @@
+.ProjectsMe {
+    padding: 30px 50px;
+}
+
+.ProjectsMe h4{
+    text-align: center;
+    font-size: 3.3rem;
+    margin: 50px 0;
+}
+
+.ProjectsMe .projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.ProjectsMe .projects .Project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:0 30px;
+    padding: 30px;
+    height: 400px;
+    width: 300px;
+    border-radius: 30px;
+    border:  3px solid;
+    cursor: pointer;
+}
+
+.ProjectsMe .projects .Project:hover{
+    transform: scale(1.04);
+}
+
+.ProjectsMe .projects .Project img{
+    height: 220px;
+    border-radius: 10px;
+    border: 4px solid #a30051;
+}
+
+.ProjectsMe .projects .Project h5{
+    font-size: 1.5rem;
+    margin: 10px 0;
+    background-image: radial-gradient( circle farthest-corner at 10% 10%,  rgba(132,10,190,1) 0%, #a30051 30.2% ); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ProjectsMe .projects .Project button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1rem;
+    margin: 10px 0;
+    background-image: radial-gradient( circle farthest-corner at 10% 10%,  rgba(132,10,190,1) 0%, rgba(163,0,81,1) 30.2% ); 
+    color: #fff;
+    border: 2px solid;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition:  0.7s;
+}
+
+.ProjectsMe .projects .Project button:hover{
+    background-image: radial-gradient( circle farthest-corner at 10% 10%,  rgba(163,0,81,1) 0%, rgba(132,10,190,1) 30.2% ); 
+    padding: 13px 23px;
+    border:2.7px solid;
+}
+
+@media(max-width: 1070px){
+    .ProjectsMe h4{
+        font-size: 2.5rem;
+    }
+    .ProjectsMe .projects .Project{
+        width: 250px;
+    }
+    .ProjectsMe .projects .Project{
+    padding: 28px;
+    height: 380px;
+    width: 280px;
+    border-radius: 28px;
+}
+
+.ProjectsMe .projects .Project img{
+    height: 200px;
+}
+
+.ProjectsMe .projects .Project h5{
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+
+.ProjectsMe .projects .Project p{
+    font-size: 1rem;
+}
+
+.ProjectsMe .projects .Project button{
+    font-size: 0.9rem;
+    margin: 8px 0;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition:  0.7s;
+}
+
+.ProjectsMe .projects .Project button:hover{
+    background-image: radial-gradient( circle farthest-corner at 10% 10%,  rgba(163,0,81,1) 0%, rgba(132,10,190,1) 30.2% ); 
+    padding: 11px 18px;
+}
+}
+
+@media(max-width: 814px){
+    .ProjectsMe h4{
+        font-size: 2.2rem;
+    }
+    .ProjectsMe .projects .Project{
+    padding: 28px;
+    height: 290px;
+    text-align: center;
+    width: 220px;
+    border-radius: 28px;
+}
+
+    .ProjectsMe .projects .Project img{
+    height: 150px;
+    }
+
+    .ProjectsMe .projects .Project h5{
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.ProjectsMe .projects .Project p{
+    font-size: 0.7rem;
+}
+
+.ProjectsMe .projects .Project button{
+    font-size: 0.7rem;
+    margin: 6px 0;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 30px;
+    transition:  0.7s;
+}
+.ProjectsMe .projects .Project button svg{
+    font-size: 1rem;
+}
+
+.ProjectsMe .projects .Project button:hover{
+    padding: 9px 15px;
+}
+}

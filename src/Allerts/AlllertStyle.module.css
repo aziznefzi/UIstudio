@@ -1,0 +1,10 @@
+.Allerts {
+    width: 100%;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 0;
+    padding: 20px;
+    width: 300px;
+    z-index: 9999;
+}

@@ -1,0 +1,70 @@
+.footer{
+    padding: 30px 40px;
+}
+
+.footer h4{
+    background-image: radial-gradient( circle farthest-corner at 10% 10%,  #840abe 0%, #a30051 30.2% ); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer p{
+  font-size: 22px;  
+}
+
+.footer hr{
+    margin: 20px 0;
+}
+
+.footer .footerContent{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .footerContent .iconMedias{
+    display: flex;
+    gap: 10px;
+}
+
+.footer .footerContent .iconMedias svg{
+    cursor: pointer;    
+}
+
+.footer .footerContent .iconMedias svg:hover{
+    color: #a30051;
+}
+
+.footer .footerContent .email{
+    background-image: radial-gradient( circle farthest-corner at 10% 10%,  #840abe 0%, #a30051 30.2% ); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media(max-width: 1000px){
+.footer p{
+  font-size: 18px;  
+}
+}
+
+@media(max-width: 700px){
+.footer h4{
+  text-align: center;
+}
+.footer p{
+  text-align: center;
+}
+}
+
+@media(max-width: 700px){
+ .footer h4{
+    font-size: 2.3rem;
+}
+.footer p{
+  font-size: 16px;
+}
+
+.footer .footerContent{
+    flex-direction: column;
+    align-items: center;
+}
+}

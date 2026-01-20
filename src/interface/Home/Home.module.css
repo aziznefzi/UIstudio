@@ -1,0 +1,219 @@
+.aboutContainer {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+  display: flex;
+}
+
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.contaner {
+  width: 100%;
+  max-height: fit-content;
+  padding: 80px 10px 10px; /* padding-top 80px to clear header */
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  box-sizing: border-box;
+}
+
+.contaner .title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding:0 30px;
+  width: 100%;
+}
+
+.contaner .title img{
+  width: 100px;
+}
+
+.contaner .title h4{
+  font-size: 20px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contaner .content{
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ align-items: center;
+ margin: 2rem;
+}
+
+.contaner .content .tagline{
+  font-size:  3.2rem;
+  font-weight: 900;
+  width: 60%;
+}
+
+.contaner .content button{
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.79);
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(132,10,190,1) 0%, rgba(163,0,81,1) 100.2% );
+  padding: 10px 20px;
+  margin: 30px 0;
+}
+
+.contaner .content button:hover{
+ padding: 12px 22px;
+}
+
+.contaner .content .IconList{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+:global(#facebook),
+:global(#instagram),
+:global(#tiktok),
+:global(#linkedin),
+:global(#github) {
+ font-size: 1.5em; /* Increased size slightly for better visibility */
+ background-color: #18191f; 
+ color: #fff;
+ box-shadow: 
+  0 0 10px #0027ff,
+  0 0 20px #0027ff,
+  inset 0 0 10px rgba(0, 39, 255, 0.5);
+  border-radius: 22px; /* Ensuring circular shape */
+  width: 30px; /* Fixed width for perfect circle */
+  height: 30px; /* Fixed height for perfect circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: animate 3s linear infinite;
+  text-shadow: 0 0 20px #0027ff, 0 0 40px #0027ff;
+    transition: all 0.3s ease-out;
+}
+
+:global(#facebook):hover,
+:global(#instagram):hover,
+:global(#tiktok):hover,
+:global(#linkedin):hover,
+:global(#github):hover{
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  font-size: 2em; 
+}
+:global(#facebook) {
+ animation-delay: 0.3s;
+}
+
+:global(#instagram) {
+ animation-delay: 0.6s;
+}
+
+:global(#tiktok) {
+ animation-delay: 0.9s;
+}
+
+:global(#linkedin) {
+ animation-delay: 1.2s;
+}
+
+:global(#github) {
+ animation-delay: 0.1s;
+}
+
+@keyframes animate {
+  0% {
+    box-shadow: 0 0 10px #0027ff, 0 0 20px #0027ff, inset 0 0 10px rgba(0, 39, 255, 0.5);
+    background-color: #18191f;
+    text-shadow: 0 0 20px #0027ff, 0 0 40px #0027ff;
+  }
+  25% {
+    box-shadow: 0 0 15px #bd00ff, 0 0 30px #bd00ff, inset 0 0 15px rgba(189, 0, 255, 0.5);
+    background-color: #211f26;
+    text-shadow: 0 0 20px #bd00ff, 0 0 40px #bd00ff;
+  }
+  50% {
+    box-shadow: 0 0 25px #ff0055, 0 0 50px #ff0055, inset 0 0 25px rgba(255, 0, 85, 0.5);
+    background-color: #2a2b38;
+    text-shadow: 0 0 20px #ff0055, 0 0 40px #ff0055;
+  }
+  75% {
+    box-shadow: 0 0 15px #bd00ff, 0 0 30px #bd00ff, inset 0 0 15px rgba(189, 0, 255, 0.5);
+    background-color: #211f26;
+    text-shadow: 0 0 20px #bd00ff, 0 0 40px #bd00ff;
+  }
+  100% {
+    box-shadow: 0 0 10px #0027ff, 0 0 20px #0027ff, inset 0 0 10px rgba(0, 39, 255, 0.5);
+    background-color: #18191f;
+    text-shadow: 0 0 20px #0027ff, 0 0 40px #0027ff;
+  }
+}
+
+@media(max-width: 1285px){
+.contaner .content .tagline{
+  font-size:  2.6rem;
+  font-weight: 900;
+  width: 60%;
+}
+}
+
+@media(max-width: 1000px){
+.contaner .content .tagline{
+  font-size:  2.5rem;
+  font-weight: 900;
+  width: 60%;
+}
+}
+
+@media(max-width: 811px){
+.contaner .content .tagline{
+  font-size:  2rem;
+  font-weight: 900;
+  width: 70%;
+}
+}
+
+@media(max-width: 600px){
+.contaner .content .tagline{
+  font-size:  1.7rem;
+  font-weight: 900;
+  width: 80%;
+}
+}
+
+@media(max-width: 530px){
+.contaner .content .tagline{
+  font-size:  1.5rem;
+  font-weight: 900;
+  width: 90%;
+}
+
+.contaner .title{
+  flex-direction: column;
+}
+
+.contaner .title img{
+  width: 60px;
+}
+
+.contaner .title h4{
+  font-size: 17px;
+}
+}
