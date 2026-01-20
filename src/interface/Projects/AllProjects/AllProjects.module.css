@@ -8,29 +8,162 @@
     justify-content: flex-start;
     color: white;
     font-family: 'Englesh', sans-serif;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
 }
 
 .AllProjects h1 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
+    font-size: 3.3rem;
+    margin-bottom: 50px;
     background: linear-gradient(135deg, rgba(132,10,190,1) 0%, rgba(163,0,81,1) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Pacifico', cursive;
+    text-align: center;
 }
 
 .content {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 40px;
-    backdrop-filter: blur(10px);
-    line-height: 1.6;
-    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    width: 320px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(163, 0, 81, 0.3);
+    border-radius: 30px;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(5px);
     text-align: center;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    border-color: #a30051;
+    box-shadow: 0 10px 30px rgba(163, 0, 81, 0.2);
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.project h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, rgba(132,10,190,1) 0%, rgba(163,0,81,1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.project img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #a30051;
+    margin-bottom: 15px;
+}
+
+.project p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.Btns {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+.Btns a {
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #a30051;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.Btns a:first-child {
+    background: linear-gradient(135deg, rgba(132,10,190,0.8) 0%, rgba(163,0,81,0.8) 100%);
+}
+
+.Btns a:hover {
+    background: #a30051;
+    border-color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(163, 0, 81, 0.5);
+}
+
+.Btns .Projectiink{
+    color: #a30051;
+}
+
+.Btns .Projectiink:hover{
+    color: #fff;
+}
+
+/* Responsiveness */
+@media (max-width: 1070px) {
+    .AllProjects h1 {
+        font-size: 2.8rem;
+    }
+    .project {
+        width: 280px;
+        padding: 20px;
+    }
+    .project h2 {
+        font-size: 1.4rem;
+    }
+    .project img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .AllProjects {
+        padding-top: 80px;
+    }
+    .AllProjects h1 {
+        font-size: 2.3rem;
+        margin-bottom: 30px;
+    }
+    .content {
+        gap: 20px;
+    }
+    .project {
+        width: 100%;
+        max-width: 350px;
+    }
+    .project img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .AllProjects h1 {
+        font-size: 2rem;
+    }
+    .project {
+        padding: 15px;
+    }
+    .Btns {
+        flex-direction: column;
+    }
+    .Btns a {
+        width: 100%;
+    }
 }

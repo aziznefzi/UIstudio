@@ -80,12 +80,12 @@ function AppContent() {
               <About />
               <Projects />
               <Services />
+              <Footer />
             </>
           } />
          <Route path="/projects/AllProjects" element={<AllProjects />} />
          <Route path="*" element={<Page404 />} />
         </Routes>
-        <Footer />
         </AllertContextProvider>
       </LanguechButtonContextProvider>
     </ThemeProvider>
