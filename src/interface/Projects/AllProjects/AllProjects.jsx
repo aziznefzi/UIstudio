@@ -12,7 +12,11 @@ export default function AllProjects() {
       <div className={style.content}>
         {
           TotalProjects.map((project) => (
-            <div key={project.id} className={style.project}>
+            <div 
+            style={{
+              backgroundColor: theme.palette.colors.background.bg3,
+            }}
+            key={project.id} className={style.project}>
               <h2>{project.NameProject}</h2>
               <img src={project.imageProject} alt={project.NameProject} />
               <p

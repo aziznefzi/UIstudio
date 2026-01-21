@@ -85,9 +85,13 @@ export default function header({navOpenNavMedia, setNavOpenNavMedia}) {
     }
   }, [openAlert]);
 
+  {/* handle theme change */}
   const toggleTheme = () => {
-    setWebsiteTheme(WebsiteTheme === 'dark' ? 'light' : 'dark')
+    const newTheme = WebsiteTheme === 'dark' ? 'light' : 'dark'
+    setWebsiteTheme(newTheme)
+    localStorage.setItem('theme', newTheme)
   }
+  {/* handle theme change */}
   const location = useLocation();
   const navigate = useNavigate();
 

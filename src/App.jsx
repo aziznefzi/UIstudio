@@ -45,7 +45,6 @@ function AppContent() {
   
   // Create theme instance based on current WebsiteTheme state
   const theme = useMemo(() => createTheme(getDesignTokens(WebsiteTheme)), [WebsiteTheme])
-
   {/* state global project */}
   const [navOpenNavMedia, setNavOpenNavMedia] = useState(false);
   {/* state global project */}
