@@ -7,4 +7,5 @@ export const TotalProjects = [
    {id: 2, imageProject: PhoneStore , NameProject: "X-Phone", SkelsProject: "React Js", GitLink: "https://github.com/aziznefzi/X-Phone.git", ProjectLink: "https://x-phone.vercel.app/" },
    {id: 3, imageProject: ClothingStor , NameProject: "Clothing Stor", SkelsProject: "Node js, MongoDB", GitLink: "https://github.com/aziznefzi/clothing-store-Project.git", ProjectLink: "https://clothing-store-project-git-main-aziz-nefzis-projects.vercel.app/" },
    {id: 4, imageProject: Croud , NameProject: "Managment System", SkelsProject: "React Js, Node Js", GitLink: "https://github.com/aziznefzi/Management-System.git", ProjectLink: "https://management-system-sable-chi.vercel.app/"},
-] 
+   {id: 5, imageProject: Croud , NameProject: "Managment System", SkelsProject: "HTML CSS JS", GitLink: "https://github.com/aziznefzi/PRODUCT-MANAGEMENT-SYSTEM-HTML-CSS-JS", ProjectLink: "https://product-management-system-ten-delta.vercel.app/"},
+]

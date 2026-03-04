@@ -6,7 +6,7 @@ import Slide from '@mui/material/Slide';
 import Fade from '@mui/material/Fade';
 {/* transtion material import */}
 
-import CV from "../../downloads/AZIZ_NEFZI_CV.PDF.pdf"
+import CV from "../../downloads/Aziz.Nefzi.pdf"
 
 {/* icons material import */}
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
